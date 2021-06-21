@@ -1,6 +1,5 @@
 package com.dicoding.anugrahzeputra.jetpackproSubmission1.userInterface.viewModel
 
-import com.dicoding.anugrahzeputra.jetpackproSubmission1.userInterface.viewModel.DetailViewModel
 import com.dicoding.anugrahzeputra.jetpackproSubmission1.utility.DummyData
 import org.junit.Assert
 import org.junit.Assert.assertEquals
