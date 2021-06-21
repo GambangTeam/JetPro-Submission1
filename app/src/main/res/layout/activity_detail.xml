@@ -67,8 +67,8 @@
 
             <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/imagePoster"
-                android:layout_width="120dp"
-                android:layout_height="170dp"
+                android:layout_width="100dp"
+                android:layout_height="160dp"
                 android:scaleType="fitXY"
                 android:src="@android:color/darker_gray"
                 app:riv_corner_radius="10dp"
