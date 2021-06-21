@@ -15,14 +15,14 @@ class HomeViewModelTest {
     }
 
     @Test
-    fun checkListMovie() {
+    fun checkListMovies() {
         val listMovies = viewModel.getListMovie()
         TestCase.assertNotNull(listMovies)
         Assert.assertEquals(10, listMovies.size)
     }
 
     @Test
-    fun checkListTvShow() {
+    fun checkListTvShows() {
         val listTvShows = viewModel.getListTvShow()
         TestCase.assertNotNull(listTvShows)
         Assert.assertEquals(10, listTvShows.size)
