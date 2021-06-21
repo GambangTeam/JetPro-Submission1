@@ -92,7 +92,7 @@
                 app:layout_constraintStart_toEndOf="@id/imagePoster"
                 app:layout_constraintTop_toTopOf="@id/imagePoster"
                 app:layout_constraintEnd_toEndOf="parent"
-                tools:text="Data Name" />
+                tools:text="@string/data_name" />
 
             <TextView
                 android:id="@+id/descriptionTag"
@@ -119,7 +119,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/descriptionTag"
                 app:layout_constraintVertical_bias="0.195"
-                tools:text="This is Movie" />
+                tools:text="@string/movie_desc" />
 
             <Button
                 android:id="@+id/btnShare"

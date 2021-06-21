@@ -9,4 +9,6 @@
     <string name="descriptionTagription">Description</string>
     <string name="watchMovie">Watch Movie onSite</string>
     <string name="intentWatchMovie">%s/watch</string>
+    <string name="data_name">Data Name</string>
+    <string name="movie_desc">This is Movie</string>
 </resources>
