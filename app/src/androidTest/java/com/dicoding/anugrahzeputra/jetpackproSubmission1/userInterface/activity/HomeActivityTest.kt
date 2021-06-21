@@ -28,6 +28,7 @@ class HomeActivityTest {
         Espresso.onView(ViewMatchers.withId(R.id.rvMovie)).perform(RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(listDummyMovie.size))
 
         Espresso.onView(ViewMatchers.withId(R.id.nav_tvshow)).perform(ViewActions.click())
+
         Espresso.onView(ViewMatchers.withId(R.id.rvTvShow)).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
         Espresso.onView(ViewMatchers.withId(R.id.rvTvShow)).perform(RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(listDummyTvShow.size))
 
