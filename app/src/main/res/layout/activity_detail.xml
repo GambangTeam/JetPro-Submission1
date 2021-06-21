@@ -9,7 +9,7 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="222dp"
         android:fitsSystemWindows="true"
         android:theme="@style/ThemeOverlay.MaterialComponents.Dark">
 
@@ -57,6 +57,7 @@
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
         android:overScrollMode="never"
+        android:background="@color/backgroundlayout"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -66,15 +67,15 @@
 
             <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/imagePoster"
-                android:layout_width="70dp"
-                android:layout_height="100dp"
+                android:layout_width="60dp"
+                android:layout_height="90dp"
                 android:scaleType="fitXY"
                 android:src="@android:color/darker_gray"
                 app:riv_corner_radius="10dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0" />
 
@@ -82,27 +83,27 @@
                 android:id="@+id/detailName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:maxLines="3"
-                android:layout_marginStart="10dp"
                 android:textColor="#000"
                 android:textSize="18sp"
                 android:textStyle="bold"
+                android:maxLines="3"
+                android:layout_marginStart="10dp"
                 app:layout_constraintBottom_toBottomOf="@id/imagePoster"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/imagePoster"
                 app:layout_constraintTop_toTopOf="@id/imagePoster"
+                app:layout_constraintEnd_toEndOf="parent"
                 tools:text="Data Name" />
 
             <TextView
-                android:id="@+id/lb_desc"
+                android:id="@+id/descriptionTag"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="@string/lb_description"
+                android:text="@string/descriptionTagription"
                 android:textColor="@android:color/black"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/imagePoster"
                 app:layout_constraintVertical_bias="0" />
@@ -114,9 +115,25 @@
                 android:layout_marginTop="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.526"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/lb_desc"
-                tools:text="This is Moview" />
+                app:layout_constraintTop_toBottomOf="@+id/descriptionTag"
+                app:layout_constraintVertical_bias="0.195"
+                tools:text="This is Movie" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:background="@color/colorPrimaryDark"
+                android:contentDescription="@string/shareVideo"
+                android:text="@string/shareVideo"
+                android:textColor="@color/cardview_dark_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/description"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintVertical_bias="0.42000002" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

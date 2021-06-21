@@ -37,17 +37,17 @@ class HomeActivity : AppCompatActivity() {
         val movieFragment = MovieFragment()
         val tvShowFragment = TvShowFragment()
 
-        setFragment(movieFragment, resources.getString(R.string.tab_title_movie))
+        setFragment(movieFragment, resources.getString(R.string.tab_movie))
 
         binding.navbar.setNavigationChangeListener { view, _ ->
             when (view.id) {
                 R.id.nav_movie -> setFragment(
                     movieFragment,
-                    resources.getString(R.string.tab_title_movie)
+                    resources.getString(R.string.tab_movie)
                 )
                 R.id.nav_tvshow -> setFragment(
                     tvShowFragment,
-                    resources.getString(R.string.tab_title_tvshow)
+                    resources.getString(R.string.tab_tvshow)
                 )
             }
         }

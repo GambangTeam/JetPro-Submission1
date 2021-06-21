@@ -43,14 +43,14 @@ class DetailActivity : AppCompatActivity() {
         val type = intent.getStringExtra(FILM_TYPE)
 
         if (type.equals(MOVIE_TYPE, ignoreCase = true)) {
-            setToolbar(resources.getString(R.string.toolbar_title_detail_movie))
+            setToolbar(resources.getString(R.string.toolbar_detail_movie))
             data?.let {
                 viewModel.setMovieId(it)
             }
             film = viewModel.getDetailMovieById()
 
         } else if (type.equals(TVSHOW_TYPE, ignoreCase = true)) {
-            setToolbar(resources.getString(R.string.toolbar_title_detail_tvshow))
+            setToolbar(resources.getString(R.string.toolbar_detail_tvshow))
             data?.let {
                 viewModel.setTvShowId(it)
             }

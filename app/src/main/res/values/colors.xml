@@ -8,4 +8,5 @@
     <color name="default_inactive">#78909c</color>
 
     <color name="white">#ffffff</color>
+    <color name="backgroundlayout">#F5F5F5</color>
 </resources>
