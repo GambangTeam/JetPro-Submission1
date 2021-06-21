@@ -122,12 +122,13 @@
                 tools:text="This is Movie" />
 
             <Button
+                android:id="@+id/btnShare"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
                 android:background="@color/colorPrimaryDark"
-                android:contentDescription="@string/shareVideo"
-                android:text="@string/shareVideo"
+                android:contentDescription="@string/watchMovie"
+                android:text="@string/watchMovie"
                 android:textColor="@color/cardview_dark_background"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/description"

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Free Movie and TvShow</string>
-    <string name="tab_movie">Free Movie</string>
-    <string name="tab_tvshow">Free TV Show</string>
+    <string name="tab_movie">Movie</string>
+    <string name="tab_tvshow">TV Show</string>
     <string name="toolbar_detail_movie">Detail Movie</string>
     <string name="toolbar_detail_tvshow">Detail TV Show</string>
     <string name="image_description">Image Description</string>
     <string name="descriptionTagription">Description</string>
-    <string name="shareVideo">Share Video</string>
+    <string name="watchMovie">Watch Movie onSite</string>
+    <string name="intentWatchMovie">%s/watch</string>
 </resources>

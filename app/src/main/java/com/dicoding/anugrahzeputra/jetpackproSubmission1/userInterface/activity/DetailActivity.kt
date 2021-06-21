@@ -1,7 +1,10 @@
 package com.dicoding.anugrahzeputra.jetpackproSubmission1.userInterface.activity
 
+import android.content.Intent
 import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.dicoding.anugrahzeputra.jetpackproSubmission1.R
@@ -12,7 +15,7 @@ import com.dicoding.anugrahzeputra.jetpackproSubmission1.utility.AppHelper.MOVIE
 import com.dicoding.anugrahzeputra.jetpackproSubmission1.utility.AppHelper.TVSHOW_TYPE
 import com.dicoding.anugrahzeputra.jetpackproSubmission1.utility.AppHelper.setGlideImage
 
-class DetailActivity : AppCompatActivity() {
+class DetailActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var film: FilmModel
     private lateinit var binding: ActivityDetailBinding
@@ -61,6 +64,7 @@ class DetailActivity : AppCompatActivity() {
         binding.description.text = film.desc
         setGlideImage(this@DetailActivity, film.poster, binding.imagePoster)
         setGlideImage(this@DetailActivity, film.img_preview, binding.image)
+        binding.btnShare.setOnClickListener(this)
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -70,6 +74,12 @@ class DetailActivity : AppCompatActivity() {
 
     private fun setToolbar(title: String) {
         supportActionBar?.title = title
+    }
+
+    override fun onClick(v: View?) {
+        val sIntent = Intent(Intent.ACTION_VIEW)
+        sIntent.data = Uri.parse(film.share_link)
+        startActivity(sIntent)
     }
 }
 
