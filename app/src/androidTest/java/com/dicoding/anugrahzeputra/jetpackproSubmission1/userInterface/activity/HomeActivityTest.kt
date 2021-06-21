@@ -24,45 +24,32 @@ class HomeActivityTest {
 
     @Test
     fun checkMovieAndTvShow() {
-        Espresso.onView(ViewMatchers.withId(R.id.rvMovie))
-            .check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
-        Espresso.onView(ViewMatchers.withId(R.id.rvMovie))
-            .perform(RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(listDummyMovie.size))
-
         Espresso.onView(ViewMatchers.withId(R.id.nav_tvshow)).perform(ViewActions.click())
-        Espresso.onView(ViewMatchers.withId(R.id.rvTvShow))
-            .check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
-        Espresso.onView(ViewMatchers.withId(R.id.rvTvShow))
-            .perform(RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(listDummyTvShow.size))
+        Espresso.onView(ViewMatchers.withId(R.id.rvTvShow)).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
+        Espresso.onView(ViewMatchers.withId(R.id.rvTvShow)).perform(RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(listDummyTvShow.size))
+
+        Espresso.onView(ViewMatchers.withId(R.id.rvMovie)).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
+        Espresso.onView(ViewMatchers.withId(R.id.rvMovie)).perform(RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(listDummyMovie.size))
 
         Espresso.onView(ViewMatchers.withId(R.id.nav_movie)).perform(ViewActions.click())
     }
 
     @Test
     fun checkDetailOnMovie() {
-        Espresso.onView(ViewMatchers.withId(R.id.rvMovie))
-            .check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
-        Espresso.onView(ViewMatchers.withId(R.id.rvMovie))
-            .perform(RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(10))
-        Espresso.onView(ViewMatchers.withId(R.id.rvMovie))
-            .perform(
+        Espresso.onView(ViewMatchers.withId(R.id.rvMovie)).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
+        Espresso.onView(ViewMatchers.withId(R.id.rvMovie)).perform(RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(10))
+        Espresso.onView(ViewMatchers.withId(R.id.rvMovie)).perform(
                 RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(10,
                     ViewActions.click()
                 ))
 
-        Espresso.onView(ViewMatchers.withId(R.id.image))
-            .check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
-        Espresso.onView(ViewMatchers.withId(R.id.imagePoster))
-            .check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
-        Espresso.onView(ViewMatchers.withId(R.id.detailName))
-            .check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
-        Espresso.onView(ViewMatchers.withId(R.id.description))
-            .check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
+        Espresso.onView(ViewMatchers.withId(R.id.image)).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
+        Espresso.onView(ViewMatchers.withId(R.id.imagePoster)).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
+        Espresso.onView(ViewMatchers.withId(R.id.detailName)).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
+        Espresso.onView(ViewMatchers.withId(R.id.description)).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
 
-        Espresso.onView(ViewMatchers.withId(R.id.detailName))
-            .check(ViewAssertions.matches(ViewMatchers.withText(listDummyMovie[10].name)))
-        Espresso.onView(ViewMatchers.withId(R.id.description))
-            .check(ViewAssertions.matches(ViewMatchers.withText(listDummyMovie[10].desc)))
+        Espresso.onView(ViewMatchers.withId(R.id.detailName)).check(ViewAssertions.matches(ViewMatchers.withText(listDummyMovie[10].name)))
+        Espresso.onView(ViewMatchers.withId(R.id.description)).check(ViewAssertions.matches(ViewMatchers.withText(listDummyMovie[10].desc)))
 
         Espresso.pressBack()
     }
@@ -70,28 +57,19 @@ class HomeActivityTest {
     @Test
     fun checkDetailOnTvShow() {
         Espresso.onView(ViewMatchers.withId(R.id.nav_tvshow)).perform(ViewActions.click())
-        Espresso.onView(ViewMatchers.withId(R.id.rvTvShow))
-            .check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
-        Espresso.onView(ViewMatchers.withId(R.id.rvTvShow))
-            .perform(RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(10))
-        Espresso.onView(ViewMatchers.withId(R.id.rvTvShow))
-            .perform(
+        Espresso.onView(ViewMatchers.withId(R.id.rvTvShow)).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
+        Espresso.onView(ViewMatchers.withId(R.id.rvTvShow)).perform(RecyclerViewActions.scrollToPosition<RecyclerView.ViewHolder>(10))
+        Espresso.onView(ViewMatchers.withId(R.id.rvTvShow)).perform(
                 RecyclerViewActions.actionOnItemAtPosition<RecyclerView.ViewHolder>(10,
                     ViewActions.click()
                 ))
 
-        Espresso.onView(ViewMatchers.withId(R.id.image))
-            .check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
-        Espresso.onView(ViewMatchers.withId(R.id.imagePoster))
-            .check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
-        Espresso.onView(ViewMatchers.withId(R.id.detailName))
-            .check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
-        Espresso.onView(ViewMatchers.withId(R.id.description))
-            .check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
-        Espresso.onView(ViewMatchers.withId(R.id.detailName))
-            .check(ViewAssertions.matches(ViewMatchers.withText(listDummyTvShow[10].name)))
-        Espresso.onView(ViewMatchers.withId(R.id.description))
-            .check(ViewAssertions.matches(ViewMatchers.withText(listDummyTvShow[10].desc)))
+        Espresso.onView(ViewMatchers.withId(R.id.image)).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
+        Espresso.onView(ViewMatchers.withId(R.id.imagePoster)).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
+        Espresso.onView(ViewMatchers.withId(R.id.detailName)).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
+        Espresso.onView(ViewMatchers.withId(R.id.description)).check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
+        Espresso.onView(ViewMatchers.withId(R.id.detailName)).check(ViewAssertions.matches(ViewMatchers.withText(listDummyTvShow[10].name)))
+        Espresso.onView(ViewMatchers.withId(R.id.description)).check(ViewAssertions.matches(ViewMatchers.withText(listDummyTvShow[10].desc)))
 
         Espresso.pressBack()
     }
