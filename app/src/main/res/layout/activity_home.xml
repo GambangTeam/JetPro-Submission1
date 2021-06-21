@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/androidmoviebackground"
     tools:context=".userInterface.activity.HomeActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -23,7 +22,7 @@
         android:id="@+id/container_main_fragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@color/backgroundlayout"
+        android:background="@drawable/androidmoviebackground"
         app:layout_constraintBottom_toTopOf="@id/navbar"
         app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintEnd_toEndOf="parent"
