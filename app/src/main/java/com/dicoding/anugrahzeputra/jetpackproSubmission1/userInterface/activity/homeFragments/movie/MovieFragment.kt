@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.dicoding.anugrahzeputra.jetpackproSubmission1.R
 import com.dicoding.anugrahzeputra.jetpackproSubmission1.databinding.FragmentMovieBinding
 import com.dicoding.anugrahzeputra.jetpackproSubmission1.objectModels.FilmModel
 import com.dicoding.anugrahzeputra.jetpackproSubmission1.userInterface.activity.DetailActivity
