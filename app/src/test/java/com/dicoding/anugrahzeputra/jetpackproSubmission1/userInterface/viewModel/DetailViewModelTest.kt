@@ -9,37 +9,37 @@ import org.junit.Test
 class DetailViewModelTest {
 
     private lateinit var viewModel: DetailViewModel
-    private val dummyMovie = DummyData.dataMovie()[0]
-    private val dummyTvShow = DummyData.dataTvShow()[0]
-    private val movieId = dummyMovie.id
-    private val tvShowId = dummyTvShow.id
+    private val movieData = DummyData.dataMovie()[0]
+    private val TvShowData = DummyData.dataTvShow()[0]
+    private val movieId = movieData.id
+    private val tvShowId = TvShowData.id
 
     @Before
-    fun setUp() {
+    fun setup() {
         viewModel = DetailViewModel()
         viewModel.setMovieId(movieId)
         viewModel.setTvShowId(tvShowId)
     }
 
     @Test
-    fun getDetailMovieById() {
-        val movie = viewModel.getDetailMovieById()
-        Assert.assertNotNull(movie)
-        assertEquals(dummyMovie.name, movie.name)
-        assertEquals(dummyMovie.desc, movie.desc)
-        assertEquals(dummyMovie.img_preview, movie.img_preview)
-        assertEquals(dummyMovie.poster, movie.poster)
-        assertEquals(dummyMovie.share_link, movie.share_link)
+    fun checkDetailMovies() {
+        val movies = viewModel.getDetailMovieById()
+        Assert.assertNotNull(movies)
+        assertEquals(movieData.name, movies.name)
+        assertEquals(movieData.desc, movies.desc)
+        assertEquals(movieData.img_preview, movies.img_preview)
+        assertEquals(movieData.poster, movies.poster)
+        assertEquals(movieData.share_link, movies.share_link)
     }
 
     @Test
-    fun getDetailTvShowById() {
-        val tvShow = viewModel.getDetailTvShowById()
-        Assert.assertNotNull(tvShow)
-        assertEquals(dummyTvShow.name, tvShow.name)
-        assertEquals(dummyTvShow.desc, tvShow.desc)
-        assertEquals(dummyTvShow.img_preview, tvShow.img_preview)
-        assertEquals(dummyTvShow.poster, tvShow.poster)
-        assertEquals(dummyTvShow.share_link, tvShow.share_link)
+    fun checkDetailTvShows() {
+        val tvShows = viewModel.getDetailTvShowById()
+        Assert.assertNotNull(tvShows)
+        assertEquals(TvShowData.name, tvShows.name)
+        assertEquals(TvShowData.desc, tvShows.desc)
+        assertEquals(TvShowData.img_preview, tvShows.img_preview)
+        assertEquals(TvShowData.poster, tvShows.poster)
+        assertEquals(TvShowData.share_link, tvShows.share_link)
     }
 }

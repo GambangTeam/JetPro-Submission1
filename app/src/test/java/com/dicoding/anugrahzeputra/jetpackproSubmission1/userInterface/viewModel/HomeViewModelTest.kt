@@ -10,7 +10,7 @@ class HomeViewModelTest {
     private lateinit var viewModel: HomeViewModel
 
     @Before
-    fun setUp() {
+    fun setup() {
         viewModel = HomeViewModel()
     }
 
